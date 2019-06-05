@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="margin: 0;">
+
+<div style="height: 753px; width: 1535px; background-image: url(bg.jpg); background-size: 100% 100%; position: absolute;">
+	<h1 style="text-align: center;">Жуки <span class="score">0</span></h1>	
+</div>
+
+<script type="text/javascript">
+	
+
+let score = 0;
+let x = function(){
+	let img1 = document.createElement("img");
+	document.body.appendChild(img1);
+	img1.style.height = "50px"
+	img1.style.width = "50px"
+	img1.src = "img.svg"
+	img1.style.position = "absolute"
+	let margLeft = Math.random()*1200
+	let roundmargLeft = Math.round(margLeft)
+	let margTop = Math.random()*600
+	let roundmargTop = Math.round(margTop)
+	img1.style.marginLeft = margLeft + "px"
+	img1.style.marginTop = margTop + "px"
+	score = score + 1
+	document.querySelector(".score").innerHTML = score;
+	img1.onclick = function(){
+		img1.style.display = "none";
+	}
+}
+setInterval(x,1000)
+
+
+</script>
+</body>
+</html>
